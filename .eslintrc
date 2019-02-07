@@ -14,13 +14,16 @@
     "rules": {
         "no-const-assign": "warn",
         "no-this-before-super": "warn",
-        "no-undef": "warn",
+        "no-undef": 0,
         "no-unreachable": "warn",
-        "no-unused-vars": "warn",
+        "no-unused-vars": 0,
         "constructor-super": "warn",
         "valid-typeof": "warn",
-        "quotes": ["error", "double"],
-        "no-trailing-spaces": 2
+        "quotes": [
+            "error",
+            "double"
+        ],
+        "no-trailing-spaces": 0
     },
     "globals": {
         "$": true
