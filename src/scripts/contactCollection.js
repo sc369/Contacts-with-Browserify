@@ -1,17 +1,22 @@
-import createContactHTML from "./contactList"
+import createHTML from "./contactList"
+import clearDOM from "./clearDOM"
+import eventListeners from "./contactForm"
 const addToDOM = (HTML, DOMlocation) => {
         DOMlocation.appendChild(HTML)
 }
+
 const contactManager = {
         getContacts: () => {
                 return fetch("http://127.0.0.1:8088/contacts")
                         .then(res => res.json())
                         .then(parsedContacts => {
+                                clearDOM()
                                 parsedContacts.forEach(element => {
-                                        console.log(element)
-                                        const contactWrapper = createContactHTML(element)
+                                        const contactWrapper = createHTML.createContactHTML(element)
                                         addToDOM(contactWrapper, document.querySelector(".output"))
                                 })
+                                createHTML.addDeleteButton()
+                                eventListeners.deleteListener()
                                 // createContactHTML(parsedContacts)
                         })
         },
