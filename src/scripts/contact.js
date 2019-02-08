@@ -4,7 +4,6 @@ const createContact = (name, phoneNumber, address) => {
         "phoneNumber": phoneNumber,
         "address": address,
     }
-    console.log(newContact)
     return newContact
 }
 

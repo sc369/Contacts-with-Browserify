@@ -5,3 +5,4 @@ import eventListeners from "./contactForm.js"
 
 eventListeners.loadListener()
 eventListeners.saveListener()
+console.log("what")

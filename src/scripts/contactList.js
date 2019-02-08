@@ -1,3 +1,5 @@
+import eventListeners from "./contactCollection"
+
 let counter = 0
 const createHTML = {
     createContactHTML: (contact) => {
@@ -16,7 +18,7 @@ const createHTML = {
         contactWrapper.appendChild(h)
         contactWrapper.appendChild(addressP)
         contactWrapper.appendChild(numberP)
-        console.log(number)
+        // console.log(number)
         return contactWrapper
     }
     ,

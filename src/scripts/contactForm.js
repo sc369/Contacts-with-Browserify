@@ -4,7 +4,6 @@ import clearDOM from "./clearDOM";
 
 const saveButton = document.querySelector("#save_button")
 const loadButton = document.querySelector("#load_button")
-const deleteButton = document.querySelector("#delete_button")
 
 const eventListeners = {
     saveListener: () => {
@@ -19,7 +18,7 @@ const eventListeners = {
     ,
     loadListener: () => {
         loadButton.addEventListener("click", (event) => {
-            console.log(event)
+            // console.log(event)
             contactManager.getContacts()
             document.createElement
         }
@@ -27,9 +26,13 @@ const eventListeners = {
     }
     ,
     deleteListener: () => {
+        const deleteButton = document.querySelector("#delete_button")
         deleteButton.addEventListener("click", (event) => {
-            console.log(event)
+            // console.log(event)
             clearDOM()
+            const deleteButton = (document.querySelector("#delete_button"))
+            const fieldset = document.querySelector("#fieldset")
+            fieldset.removeChild(deleteButton)
         })
     }
 }
