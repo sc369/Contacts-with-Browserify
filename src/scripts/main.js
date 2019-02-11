@@ -1,8 +1,3 @@
-import contactManager from "./contactCollection"
-import createContactHTML from "./contactList.js"
-import eventListeners from "./contactForm.js"
-
-
+import eventListeners from "./eventListeners.js"
 eventListeners.loadListener()
 eventListeners.saveListener()
-console.log("what")

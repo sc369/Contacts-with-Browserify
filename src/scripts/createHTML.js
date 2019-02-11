@@ -1,23 +1,26 @@
-import eventListeners from "./contactCollection"
+import eventListeners from "./eventListeners"
 
-let counter = 0
 const createHTML = {
     createContactHTML: (contact) => {
         const contactWrapper = document.createElement("DIV")
-        contactWrapper.setAttribute("id", `${counter}`)
-        counter++
+        contactWrapper.setAttribute("id", `${contact.id}`)
         const h = document.createElement("h1")
         const text = document.createTextNode(contact.name)
         const numberP = document.createElement("P")
         const number = document.createTextNode(contact.phoneNumber)
         const addressP = document.createElement("P")
         const address = document.createTextNode(contact.address)
+        const deleteContactButton = document.createElement("button")
+        const buttonText = document.createTextNode(`delete ${contact.name}`)
+        deleteContactButton.appendChild(buttonText)
+        deleteContactButton.setAttribute("id", `deleteButton--${contact.id}`)
         h.appendChild(text)
         numberP.appendChild(number)
         addressP.appendChild(address)
         contactWrapper.appendChild(h)
         contactWrapper.appendChild(addressP)
         contactWrapper.appendChild(numberP)
+        contactWrapper.appendChild(deleteContactButton)
         // console.log(number)
         return contactWrapper
     }
